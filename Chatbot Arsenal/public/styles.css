@@ -1,0 +1,187 @@
+/* Theme Variables */
+:root {
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --content-bg: #fff;
+    --input-bg: #fff;
+    --input-border: #ccc;
+    --accent-color: #ac4ffe;
+    --model-selector-bg: #f0f0f0;
+    --question-color: #222;
+    --answer-color: #444;
+    --scrollbar-thumb: #ccc;
+}
+
+body.dark {
+    --bg-color: #121212;
+    --text-color: #f2f2f2;
+    --content-bg: #1e1e1e;
+    --input-bg: #2a2a2a;
+    --input-border: #444;
+    --accent-color: #bb86fc;
+    --model-selector-bg: #2d2d2d;
+    --question-color: #e0e0e0;
+    --answer-color: #ccc;
+    --scrollbar-thumb: #555;
+}
+
+/* Basic styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Main container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+/* Chat content */
+.content {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+    background-color: var(--content-bg);
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+}
+
+.question-section,
+.answer-section {
+    margin: 1rem 0;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+.question-section {
+    font-weight: 600;
+    color: var(--question-color);
+}
+
+.answer-section {
+    color: var(--answer-color);
+    padding-left: 1rem;
+    border-left: 4px solid var(--accent-color);
+}
+
+/* Chat input and footer */
+.chat-form {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.chat-input-wrapper {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.chat-input {
+    flex-grow: 1;
+    padding: 1rem;
+    font-size: 1.125rem;
+    border: 1px solid var(--input-border);
+    border-radius: 14px;
+    outline: none;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.chat-input:focus {
+    border-color: var(--accent-color);
+}
+
+/* Send button */
+.send-button {
+    padding: 0.75rem;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.send-button:hover {
+    background-color: var(--accent-color);
+}
+
+.send-button svg {
+    width: 28px;
+    height: 28px;
+}
+
+/* Disabled state */
+.send-button-nonactive {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Model selector styling */
+.model-selector {
+    padding: 0.65rem 1rem;
+    font-size: 1.05rem;
+    border: 1px solid var(--input-border);
+    border-radius: 12px;
+    background-color: var(--model-selector-bg);
+    color: var(--text-color);
+    margin-right: 0.75rem;
+    outline: none;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.model-selector:focus {
+    border-color: var(--accent-color);
+    background-color: var(--input-bg);
+}
+
+/* Scroll behavior for content */
+.content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border-radius: 4px;
+}
