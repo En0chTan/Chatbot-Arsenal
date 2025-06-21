@@ -1,10 +1,10 @@
 # Introduction
 
-**Chatbot Arsenal** is a modern, AI-powered chatbot interface that allows users to interact with various language models through a clean, responsive web UI. It supports multiple models via the OpenRouter API and comes with light/dark theme toggling.
+**Chatbot Arsenal** is a modern, AI-powered chatbot interface that allows users to interact with various language models through a web UI. It supports multiple models via the OpenRouter API and comes with light/dark theme.
 
 This project features a full-stack setup:
 <ol>
-  <li>Frontend – HTML, CSS, and JavaScript for an interactive chat experience.</li>
+  <li>Frontend – HTML, CSS, and JavaScript</li>
   <li>Backend – Node.js + Express to securely route API requests to OpenRouter.</li>
 </ol>
 
